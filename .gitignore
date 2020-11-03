@@ -1,1 +1,5 @@
 /MiniDraw/*.user
+interface-raw.png
+release_x64.zip
+/build-MiniDraw-Desktop_Qt_5_12_9_MSVC2017_64bit-Debug/
+/build-MiniDraw-Desktop_Qt_5_12_9_MSVC2017_64bit-Release/
