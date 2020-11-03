@@ -43,7 +43,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
-    Q_UNUSED(event);                                               // 声明未使用变量，避免编译器警告
+    Q_UNUSED(event);                                                // 声明未使用变量，避免编译器警告
     scene->setSceneRect(0, 0, view->width()-2, view->height()-8);   // 若 scene 与 view 大小接近会触发 scrollbar，经尝试减去这两个数刚好能消去
     scene->setRect(QRect(0, 0, view->width(), view->height()));     // 更新需要刷新绘图的矩形区域
 }
@@ -221,7 +221,7 @@ void MainWindow::on_actionLineWidth_triggered()
                                                "Set Pen Width",
                                                "Enter Width (pixel): ",
                                                QLineEdit::Normal,
-                                               "1",
+                                               QString::number(pen->widthF()),
                                                &ok);
     if(ok && !width_text.isEmpty())
     {
