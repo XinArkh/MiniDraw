@@ -117,6 +117,7 @@ void MainScene::mousePressd(QMouseEvent *event)
                 QPoint p2 = start_point;
                 QGraphicsLineItem *lineItem = new QGraphicsLineItem();
                 lineItem->setLine(p1.x(), p1.y(), p2.x(), p2.y());
+                lineItem->setPen(*pen);
                 polygonLines.push_back(lineItem);   // 将所有临时线段添加到一个 vector 中管理
                 polygonPoints.push_back(start_point);   // 在关键点集中添加关键点
                 addItem(lineItem);
